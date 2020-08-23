@@ -1,17 +1,32 @@
 # Lane_Detection
 
-Gif do resultado
+
+![](https://raw.githubusercontent.com/LucasMirachi/Lane_Detection/master/Images/detected_avg_lines.gif)
 
 ## Quais bilbiotecas importar
 
 ## Processamento da imagem
-Base -> Gray -> Blur -> Canny
+![](https://raw.githubusercontent.com/LucasMirachi/Lane_Detection/master/Images/base_video.gif)
+
+###Convert to Grayscale
+
+![](https://raw.githubusercontent.com/LucasMirachi/Lane_Detection/master/Images/gray.gif)
+
+###Apply Blur with Gaussian Filter
+![](https://raw.githubusercontent.com/LucasMirachi/Lane_Detection/master/Images/blur.gif)
+
+###Apply Canny Filter
+
+![](https://raw.githubusercontent.com/LucasMirachi/Lane_Detection/master/Images/canny.gif)
 
 ## Aplicacao da mascara
-Canny -> Poligono branco com indicacao das coordenadas -> Imagem mascarada
+Highliting the Region of Interest
+
+![](https://raw.githubusercontent.com/LucasMirachi/Lane_Detection/master/Images/mask.gif)
 
 ## Criacao das linhas
-Linhas tortas -> Linhas tortas no video base
+
+![](https://raw.githubusercontent.com/LucasMirachi/Lane_Detection/master/Images/lines.gif)
 
 ## Average Lines
-Linhas corretas -> Video final
+![](https://raw.githubusercontent.com/LucasMirachi/Lane_Detection/master/Images/detected_avg_lines.gif)
