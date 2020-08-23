@@ -3,7 +3,7 @@ import cv2
 import numpy as np
 
 def canny(img):
-	# Converting the image's color channel from RGB to Grayscale
+    # Converting the image's color channel from RGB to Grayscale
     gray = cv2.cvtColor(src=img, code=cv2.COLOR_RGB2GRAY)
     # To apply a GaussionBlur with a 5x5 Kernel to "smooth" the image
     blur = cv2.GaussianBlur(src=gray,ksize=(5, 5),sigmaX=10)
@@ -11,11 +11,11 @@ def canny(img):
     median_pixel_value = np.median(img)
     lower=int(max(0,0.7*median_pixel_value))
     upper = int(min(255, 1.3*median_pixel_value))
-    canny = cv2.Canny(image=gray, threshold1=lower, threshold2=upper)
+    canny = cv2.Canny(image=blur, threshold1=lower, threshold2=upper)
     return canny
 
 def region_of_interest(canny):
-	# PS: the video size I used is actually (1080, 1920, 3) 
+    # PS: the video size I used is actually (1080, 1920, 3) 
     height = canny.shape[0]
     width = canny.shape[1]
     mask = np.zeros_like(canny)
@@ -25,7 +25,7 @@ def region_of_interest(canny):
     (750, 700),
     (1100, 700),
     (1750, height),]], np.int32)
- 	#So far, we've created a black image with a white polygon that involves the area we want to show. Now, we'll have to make a "bitwise &" operation
+    #So far, we've created a black image with a white polygon that involves the area we want to show. Now, we'll have to make a "bitwise &" operation
     cv2.fillPoly(mask, polygon, 255)
     masked_image = cv2.bitwise_and(canny, mask)
     return masked_image
@@ -50,7 +50,7 @@ def make_points(image, line):
     return [[x1, y1, x2, y2]]
  
 def average_slope_intercept(image, lines):
-	#left_fit contains the coordinates of the averaged lines on the left and right_fit contains the coordinates of the averaged lines on the right
+    #left_fit contains the coordinates of the averaged lines on the left and right_fit contains the coordinates of the averaged lines on the right
     left_fit    = []
     right_fit   = []
     if lines is None:
@@ -76,7 +76,7 @@ def average_slope_intercept(image, lines):
  
 cap = cv2.VideoCapture("lanes_video.mp4")
 while(cap.isOpened()):
-	#To return every video-frame from our capture, we must create a loop
+    #To return every video-frame from our capture, we must create a loop
     _, frame = cap.read()
     #cropped_image = region_of_interest(frame) -> To visualize the mask and tweak the mask coordenates
     canny_image = canny(frame)
@@ -86,7 +86,7 @@ while(cap.isOpened()):
     line_image = display_lines(frame, averaged_lines)
     combo_image = cv2.addWeighted(src1=frame, alpha=0.8, src2=line_image, beta=1, gamma=1)
     cv2.imshow("result", combo_image)
-   	#Instead of waiting for the whole video to end so we can close it, we can end the loop with the command
+    #Instead of waiting for the whole video to end so we can close it, we can end the loop with the command
     if cv2.waitKey(1) & 0xFF == ord('q'):
         break
 cap.release()
