@@ -5,9 +5,9 @@ Detect lanes using computer vision techniques. This project is part of the Udaci
 
 ![](https://raw.githubusercontent.com/LucasMirachi/Lane_Detection/master/Images/detected_avg_lines.gif)
 
-## Quais bilbiotecas importar
+## Setup
 
-## Processamento da imagem
+## Image Preprocessing
 ![](https://raw.githubusercontent.com/LucasMirachi/Lane_Detection/master/Images/base_video.gif)
 
 ### Convert to Grayscale
