@@ -3,6 +3,7 @@ The objective of this project is to create a lane lines detection algorithm usin
 
 ![](https://raw.githubusercontent.com/LucasMirachi/Lane_Detection/master/Images/detected_avg_lines.gif)
 
+---
 ## Resources
 For this project, the following resources were used:
 * [Python 3.8.5](https://www.python.org/downloads/) *- Latest Python version by the time the project was created*
@@ -16,6 +17,7 @@ In OpenCV, in order to display the video file, it is needed to create a Video Ca
 
 ![](https://raw.githubusercontent.com/LucasMirachi/Lane_Detection/master/Images/base_video.gif)
 
+---
 ## Application of the Canny Filter
 RGB Color images have, as the name suggests, 3 color channels (Reg, Green, Blue). Before applying the Canny Filter, one technique applyed to use less computational power, is to transform the 3-Color-Channel RGB image into a 1-Color-Channel Grayscale image.
 
@@ -23,24 +25,29 @@ RGB Color images have, as the name suggests, 3 color channels (Reg, Green, Blue)
 
 ![](https://raw.githubusercontent.com/LucasMirachi/Lane_Detection/master/Images/gray.gif)
 
+---
 ### Apply Blur with Gaussian Filter
 When applying the Canny Filter for edge detection, it is easily affected by noise and, to reduce this noise and make the image smoother, we apply a Blur
 ![](https://raw.githubusercontent.com/LucasMirachi/Lane_Detection/master/Images/blur.gif)
 
+---
 ### Edge detection with Canny
 
 ![](https://raw.githubusercontent.com/LucasMirachi/Lane_Detection/master/Images/canny.gif)
 
+---
 ## Highliting the Region of Interest
 
 ![](https://user-images.githubusercontent.com/44238566/91187539-aa1a8800-e6c6-11ea-8f57-1f2d175de578.png)
 
 ![](https://raw.githubusercontent.com/LucasMirachi/Lane_Detection/master/Images/mask.gif)
 
+---
 ### Criacao das linhas
 
 ![](https://raw.githubusercontent.com/LucasMirachi/Lane_Detection/master/Images/lines.gif)
 
+---
 ### Average Lines
 ![](https://raw.githubusercontent.com/LucasMirachi/Lane_Detection/master/Images/detected_avg_lines.gif)
 
