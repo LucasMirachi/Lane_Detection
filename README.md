@@ -19,7 +19,7 @@ In OpenCV, in order to display the video file, it is needed to create a Video Ca
 ## Application of the Canny Filter
 RGB Color images have, as the name suggests, 3 color channels (Reg, Green, Blue). Before applying the Canny Filter, one technique applyed to use less computational power, is to transform the 3-Color-Channel RGB image into a 1-Color-Channel Grayscale image.
 
-![(https://user-images.githubusercontent.com/44238566/91187477-9707b800-e6c6-11ea-8a54-1e72456e2c9b.png)
+![](https://user-images.githubusercontent.com/44238566/91187477-9707b800-e6c6-11ea-8a54-1e72456e2c9b.png)
 
 ![](https://raw.githubusercontent.com/LucasMirachi/Lane_Detection/master/Images/gray.gif)
 
