@@ -9,7 +9,7 @@ For this project, the following resources were used:
 * [Numpy 1.18.5](https://numpy.org/)
 * [OpenCV 4.3.0](https://opencv.org/releases/)
 * A video recording of a vehicle moving in a lane street
-The video used on the project was filmed by me in my hometown (Belo Horizonte - Brazil). In my conception, it was a interesting one because it contained not only straight and cropped lanes, but it also had shadows from the trees and a uphill, wich made the line detection a little bit more difficult.
+The video used on the project was filmed by me in my hometown (Belo Horizonte - Brazil). In my conception, it was a interesting one because it contained not only straight and cropped lanes, but it also had shadows from the trees and a little change of the perspective due to a soft uphill on the streed (that makes the lanes look a little more separeted from each other), wich made the line detection a little bit more difficult.
 The raw video can be downloaded [here](https://drive.google.com/file/d/1nM4K6CksBFwiSmNYrX8QAB3XzLxWB3TG/view?usp=sharing).
 
 In OpenCV, in order to display the video file, it is needed to create a Video Capture Object and then create a loop to decode and show every video frame 
