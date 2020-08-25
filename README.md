@@ -5,7 +5,7 @@ The objective of this project is to create a lane lines detection algorithm usin
 
 ## Resources
 For this project, the following resources were used:
-* [Python 3.8.5](https://www.python.org/downloads/) - Latest Python version by the time the project was created
+* [Python 3.8.5](https://www.python.org/downloads/) *- Latest Python version by the time the project was created*
 * [Numpy 1.18.5](https://numpy.org/)
 * [OpenCV 4.3.0](https://opencv.org/releases/)
 * A video recording of a vehicle moving in a lane street
